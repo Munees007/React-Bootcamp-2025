@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #edf6f9;
+        }
+        .GCard{
+            width: 300px;
+            height: fit-content;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            background-color: #006d77;
+            padding: 20px 10px;
+        }
+        .GCard h3{
+            color: white;
+            
+        }
+        .GCard input{
+            height: 40px;
+            width: 150px;
+            border-radius: 15px;
+            border: transparent;
+            font-size: larger;
+        }
+        .GCard button{
+            width: fit-content;
+            padding: 5px 20px;
+            background-color: #83c5be;
+            border: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .GCard button:hover{
+            transform: scale(1.1);
+
+        }
+        .GCard button:active{
+            transform: scale(0.9);
+        }
+
+        .GCard p{
+            color: wheat;
+            font-size: larger;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="GCard">
+        <h3>Number Guessing Game (1-20)</h3>
+        <input type="number" id="gNumber">
+        <button onclick="GuessNumber()">Guess</button>
+        <p id="res">Result: ?</p>
+    </div>
+</body>
+<script>
+    let randomNumber = Math.floor(Math.random() * 20);
+    const gNumber = document.getElementById("gNumber")
+    const res = document.getElementById("res")
+    function GuessNumber()
+    {
+        if(gNumber.value == randomNumber)
+        {
+            res.innerHTML = "Result: Correct"
+        }
+        else
+        {
+            res.innerHTML = "Result: Wrong"
+        }
+        gNumber.value = ""
+    }
+</script>
+</html>

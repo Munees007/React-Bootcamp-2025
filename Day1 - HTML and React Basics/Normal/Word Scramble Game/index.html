@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f7ede2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card {
+            background: #84a59d;
+            padding: 25px;
+            border-radius: 15px;
+            width: 320px;
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .scramble {
+            font-size: 28px;
+            color: #f7fff7;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #f6bd60;
+            color: #333;
+            border: none;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        .status {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2 style="color: #f7fff7;">Word Scramble</h2>
+        <p id="word" class="scramble"></p>
+        <input type="text" id="answer" placeholder="Type here...">
+        <button onclick="check()">Check</button>
+        <p class="status" id="status">Start guessing!</p>
+    </div>
+
+<script>
+    const word = document.getElementById("word")
+    const answer = document.getElementById("answer")
+    const statusMsg = document.getElementById("status")
+
+    let index = 0
+    
+    const words = ["dean", "castiel", "klaus", "sam", "house"]
+
+    function scrambleWord(original) {
+        let scrambled = ""
+        
+        while (scrambled === "" || scrambled === original) 
+        {
+            scrambled = ""
+            let rand
+            let temp = []
+
+            for(let i = 0; i < original.length; i++)
+            {
+                rand = Math.floor(Math.random() * original.length)
+                
+                while(temp.includes(rand))
+                {
+                    rand = Math.floor(Math.random() * original.length)
+                }
+
+                temp.push(rand)
+                scrambled += original[rand]
+            }
+        }
+
+        return scrambled
+    }
+
+    function initialize(firstTime =false) {
+        word.innerHTML = scrambleWord(words[index]).toUpperCase()
+        answer.value = ""
+        if(firstTime){
+        statusMsg.innerHTML = "Guess the word!"
+    }
+    }
+
+    initialize(true)
+
+    function check() {
+
+        if (index >= words.length) {
+            statusMsg.innerHTML = "Game already ended!"
+            return
+        }
+
+        if (answer.value.toUpperCase() === words[index].toUpperCase()) {
+            index++
+
+            if (index >= words.length) {
+                statusMsg.innerHTML = "🎉 All words completed!"
+                word.innerHTML = ""
+                return
+            }
+
+            statusMsg.innerHTML = "Correct! Next word →"
+            initialize()
+
+        } else {
+            statusMsg.innerHTML = "❌ Wrong! Try again"
+        }
+    }
+</script>
+
+</body>
+</html>
