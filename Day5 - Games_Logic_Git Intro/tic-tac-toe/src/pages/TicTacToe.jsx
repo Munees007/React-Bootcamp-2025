@@ -17,7 +17,7 @@ export default function TicTacToe() {
     const win = calculateWinner(newSquares);
     if (win) {
         setWinner(win);
-        toast.success(win)
+        toast.success(`Winner is ${win}`)
     }
   };
 
