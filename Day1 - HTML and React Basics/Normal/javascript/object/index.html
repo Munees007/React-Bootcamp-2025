@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+        h1 { color: #333; }
+        pre { background: #eee; padding: 10px; border-radius: 5px; }
+        button { padding: 10px 15px; margin-bottom: 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Object Example (Profile Data)</h1>
+    <p>We have a profile object and we can display its data using a method.</p>
+    <button onclick="objectExample()">Show Object Example</button>
+    <pre id="objectResult"></pre>
+
+    <script>
+        function objectExample() {
+            let profile = {
+                name: "Muneeswaran",
+                age: 21,
+                email: "muneesm458@gmail.com",
+                courses: ["Math", "Physics", "Computer Science"],
+
+                // Method to display profile
+                displayProfile: function() {
+                    return `Name: ${this.name}\nAge: ${this.age}\nEmail: ${this.email}\nCourses: ${this.courses.join(", ")}`;
+                }
+            };
+
+            let result = profile.displayProfile();
+            document.getElementById('objectResult').textContent = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+        h1 { color: #333; }
+        pre { background: #eee; padding: 10px; border-radius: 5px; }
+        button { padding: 10px 15px; margin-bottom: 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Array Example</h1>
+    <p>We have a list of numbers. We will use array methods like <strong>map</strong>, <strong>filter</strong>, and <strong>reduce</strong>.</p>
+    <button onclick="arrayExample()">Show Array Example</button>
+    <pre id="arrayResult"></pre>
+
+    <script>
+        function arrayExample() {
+            let numbers = [1, 2, 3, 4, 5];
+            let result = '';
+
+            // Map - multiply each number by 2
+            let doubled = numbers.map(num => num * 2);
+            result += 'Original Array: ' + numbers + '\n';
+            result += 'Doubled Array: ' + doubled + '\n';
+
+            // Filter - only even numbers
+            let even = numbers.filter(num => num % 2 === 0);
+            result += 'Even Numbers: ' + even + '\n';
+
+            // Reduce - sum of numbers
+            let sum = numbers.reduce((total, num) => total + num, 0);
+            result += 'Sum of Numbers: ' + sum;
+
+            document.getElementById('arrayResult').textContent = result;
+        }
+    </script>
+</body>
+</html>
