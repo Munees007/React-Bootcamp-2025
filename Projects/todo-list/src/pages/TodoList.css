@@ -1,0 +1,29 @@
+.todo-page
+{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     height: 100vh;
+     
+}
+.todo-page h1{
+    color: white;
+}
+.todo-list
+{
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}
+.todo-list h1{
+    color: black;
+    margin-top: 10px;
+}
+
+.todo-empty{
+    text-align: center;
+    margin-top: 20px;
+}

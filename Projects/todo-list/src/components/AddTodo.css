@@ -1,0 +1,28 @@
+.add-todo
+{
+    background-color: #001d3d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+}
+.add-todo div{
+    display: flex;
+    gap: 10px;
+}
+
+.add-todo div input{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+.add-todo div button{
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffc300;
+}
