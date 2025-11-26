@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is React mainly used for?",
+    "options": [
+      "Building user interfaces",
+      "Database management",
+      "Operating system development",
+      "Cyber security"
+    ],
+    "answer": "Building user interfaces"
+  },
+  {
+    "question": "What is the purpose of Vite in React development?",
+    "options": [
+      "To compile and bundle the project faster",
+      "To design UI with drag and drop",
+      "To store user data",
+      "To create machine learning models"
+    ],
+    "answer": "To compile and bundle the project faster"
+  },
+  {
+    "question": "Which of the following is the command to create a new Vite + React project?",
+    "options": [
+      "npx create-react-app",
+      "npx react-vite-app",
+      "npm create vite@latest",
+      "react init vite"
+    ],
+    "answer": "npm create vite@latest"
+  },
+  {
+    "question": "Which file is used as the entry point in a Vite + React project?",
+    "options": [
+      "index.html",
+      "server.js",
+      "app.css",
+      "package.json"
+    ],
+    "answer": "index.html"
+  },
+  {
+    "question": "What extension is commonly used to write React components?",
+    "options": [
+      ".jsx",
+      ".html",
+      ".php",
+      ".css"
+    ],
+    "answer": ".jsx"
+  }
+]

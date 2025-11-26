@@ -1,0 +1,22 @@
+.score-card{
+    background-color: #14213d;
+    width: 35rem;
+    height: 20rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.score{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.score P{
+    font-size: x-large;
+}
+

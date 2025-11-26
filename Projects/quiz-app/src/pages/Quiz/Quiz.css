@@ -1,0 +1,18 @@
+.quiz_page {
+    background-color: #000000;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.quiz_page h1{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
