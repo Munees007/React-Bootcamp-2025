@@ -5,7 +5,7 @@ import "./ThirukkuralPage.css"
 import thiruvalluvar from "../assets/images/thiruvalluvar.png"
 export default function ThirukkuralPage() {
 
-    const [kuralNum, setKuramNum] = useState(0)
+    const [kuralNum, setKuramNum] = useState()
     const [kural, setKural] = useState(null)
     const [loading, setLoading] = useState(false)
 
@@ -27,6 +27,7 @@ export default function ThirukkuralPage() {
                     const res = await single_kural(kuralNum);
                     setKural(res);
                     setLoading(false)
+                    setKuramNum()
                 }}>
                     Fetch
                 </button>
