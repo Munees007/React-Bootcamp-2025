@@ -1,0 +1,48 @@
+.kural-card {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 5px solid #4f46e5; /* Indigo stripe */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.kural-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.kural-number {
+    color: #6b7280; /* Gray */
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.kural-adhiharam {
+    font-size: 1.3rem;
+    color: #4f46e5; /* Indigo */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.kural-iyal,
+.kural-pal,
+.kural-meaning {
+    color: #374151; /* Dark gray */
+    margin-bottom: 8px;
+}
+
+.kural-lines {
+    color: #1f2937; /* Slightly darker */
+    margin-bottom: 12px;
+}
+
+.kural-line {
+    font-style: italic;
+    margin: 2px 0;
+}
+
+.kural-meaning strong {
+    color: #4f46e5; /* Indigo highlight for 'Meaning:' */
+}

@@ -1,0 +1,71 @@
+.kural-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kural-page img{
+    width: 200px;
+}
+.kural-fetch-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kural-fetch-card input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db; /* light gray */
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.kural-fetch-card input:focus {
+    border-color: #4f46e5; /* Indigo */
+    box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+}
+
+.kural-fetch-card button {
+    padding: 8px 16px;
+    background-color: #4f46e5; /* Indigo */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.kural-fetch-card button:hover {
+    background-color: #4338ca; /* Darker Indigo */
+    transform: translateY(-1px);
+}
+
+.kural-fetch-card button:active {
+    transform: translateY(0);
+}
+
+.loading {
+    text-align: center;
+    font-size: 1rem;
+    color: #4f46e5; /* Indigo */
+    font-weight: bold;
+    margin: 20px 0;
+    animation: pulse 1.2s infinite;
+}
+
+/* Simple pulse animation */
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
