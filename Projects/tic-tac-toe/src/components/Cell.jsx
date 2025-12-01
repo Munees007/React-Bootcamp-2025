@@ -20,7 +20,7 @@ export const Cell = ({value,index,handleClick}) => {
             onClick={()=>{
                 if(value=="")
                 {
-                    handleClick(index,value)
+                    handleClick(index)
                 }
                 
             }}

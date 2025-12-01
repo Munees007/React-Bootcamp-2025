@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 export const TicTacToe = () => {
     const [data,setData] =  useState(Array(9).fill(""))
     const [currentPlayer,setCurrentPlayer] = useState("O")
-    const handleClick = (index,value) =>{
+    const handleClick = (index) =>{
         setData(prev => {
             let temp = [...prev]
             temp[index] = currentPlayer
